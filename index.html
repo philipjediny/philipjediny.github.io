@@ -3,7 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collapsible Sections</title><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Collapsible Sections</title>
+
+<style>
+  .collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    margin-bottom: 4px;
+    width: 100%;
+    border: solid 1px black;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+
+  .content {
+    display: none;
+    padding: 0 18px;
+  }
+</style>
+</head>
+<body>
+(page under construction)
+
+<button class="collapsible">Strange Attractors (Python)</button>
+<div class="content">
+  <p>Suspendisse potenti. Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam sodales pretium neque auctor venenatis.</p>
+</div>
+
+<button class="collapsible">Marching Cubes (wgpu, Rust)</button>
+<div class="content">
+  <p>Vestibulum nec sem eu risus interdum iaculis. Curabitur convallis erat et tempor hendrerit. Nam id lectus id eros scelerisque fermentum.</p>
+</div>
+
+<button class="collapsible">Crank-Nicholson PDE solver (Python)</button>
+<div class="content">
+  <p>Vestibulum nec sem eu risus interdum iaculis. Curabitur convallis erat et tempor hendrerit. Nam id lectus id eros scelerisque fermentum.</p>
+</div>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
+
 <style>
   .collapsible {
     background-color: #eee;
